@@ -47,13 +47,17 @@ with open("results/To_be_classified.txt") as f:
         if len(line)==0 or line.startswith("-DOCSTART-"):
             if len(tags)!=0:
                 chunk = get_chunk(tags)
-                for (chunk_start, chunk_end) in chunk:
-                    for i, (one_word, one_tag) in enumerate(zip(words, tags)):
-                        if i<chunk_start or i>=chunk_end:
-                            g.write("{} O\n".format(one_word))
-                        else:
-                            g.write("{} {}\n".format(one_word, one_tag))
-                    g.write("\n")
+                if len(chunk)!=0:
+                    for (chunk_start, chunk_end) in chunk:
+                        for i, (one_word, one_tag) in enumerate(zip(words, tags)):
+                            if i<chunk_start or i>=chunk_end:
+                                g.write("{} O\n".format(one_word))
+                            else:
+                                g.write("{} {}\n".format(one_word, one_tag))
+                        g.write("\n")
+                    chunk = []
+                else:
+                    pass
             words = []
             tags  = []
 
