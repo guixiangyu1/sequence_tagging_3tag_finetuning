@@ -313,7 +313,7 @@ class NERModel(BaseModel):
         """
 
         d = dict()
-        with open("../data/tags.txt") as f:
+        with open("data/tags.txt") as f:
             for idx, word in enumerate(f):
                 word = word.strip()  # 若没有这个strip（），则每个词包含一个换行符
                 d[idx] = word
