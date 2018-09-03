@@ -1,7 +1,7 @@
 
 with open("results/To_be_classified.txt","w") as f:
     while(1):
-        g = open("data/text.txt")
+        g = open("data/test.txt")
         h = open("results/tag_pred.txt")
 
         raw_text_line = g.readline()
