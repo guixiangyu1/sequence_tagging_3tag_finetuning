@@ -1,6 +1,6 @@
 
 with open("results/To_be_classified.txt","w") as f:
-    with open("data/text.txt") as g:
+    with open("data/test.txt") as g:
         h = open("results/tag_pred.txt")
         for raw_text_line in g:
             tag = h.readline()
