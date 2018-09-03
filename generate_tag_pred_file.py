@@ -1,9 +1,8 @@
 
 with open("results/To_be_classified.txt","w") as f:
-    while(1):
-        g = open("data/test.txt")
-        h = open("results/tag_pred.txt")
-
+    g = open("data/test.txt")
+    h = open("results/tag_pred.txt")
+    while (1):
         raw_text_line = g.readline()
         tag = h.readline()
         while(tag=='\n'):
