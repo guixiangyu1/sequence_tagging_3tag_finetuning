@@ -1,7 +1,7 @@
 
-with open("filname","w") as f:
-    g = open("file1")
-    h = open("file2")
+with open("results/To_be_classified.txt","w") as f:
+    g = open("data/text.txt")
+    h = open("results/tag_pred.txt")
 
     raw_text_line = g.readline()
     tag = h.readline()
