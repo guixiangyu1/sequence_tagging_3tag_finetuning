@@ -54,6 +54,8 @@ with open("results/To_be_classified.txt") as f:
                         else:
                             g.write("{} {}\n".format(one_word, one_tag))
                     g.write("\n")
+            words = []
+            tags  = []
 
         else:
             word = line.split(' ')[0]
