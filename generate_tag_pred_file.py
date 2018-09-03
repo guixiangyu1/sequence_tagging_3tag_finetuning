@@ -44,7 +44,7 @@ with open("results/To_be_classified.txt") as f:
     g = open("results/For_onebyone.txt", 'w')
     for line in f:
         line = line.strip()
-        if len(line)==0 and line.startswith("-DOCSTART-"):
+        if len(line)==0 or line.startswith("-DOCSTART-"):
             if len(tags)!=0:
                 chunk = get_chunk(tags)
                 for (chunk_start, chunk_end) in chunk:
