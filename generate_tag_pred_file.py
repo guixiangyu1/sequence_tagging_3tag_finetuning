@@ -10,7 +10,8 @@ with open("results/To_be_classified.txt","w") as f:
 
             if raw_text_line=="\n" or raw_text_line.startswith("-DOCSTRAT-"):
                 f.write(raw_text_line)
-            elif len(raw_text_line.strip())!=0:
+            else:
+                # if len(raw_text_line.strip())!=0:
                 raw_text_line = raw_text_line.strip()
                 f.write("{} {}".format(raw_text_line, tag))
 
