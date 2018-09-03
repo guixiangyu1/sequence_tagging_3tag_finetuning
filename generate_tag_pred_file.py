@@ -41,7 +41,7 @@ with open("results/To_be_classified.txt","w") as f:
 #将合成后的文件处理成classification需要的形式，onebyone
 words, tags = [], []
 with open("results/To_be_classified.txt") as f:
-    g = open("results/For_onebyone.txt", 'w')
+    g = open("../sequence_tagging_onebyone_finetuning_PROB/data/For_onebyone.txt", 'w')
     for line in f:
         line = line.strip()
         if len(line)==0 or line.startswith("-DOCSTART-"):
