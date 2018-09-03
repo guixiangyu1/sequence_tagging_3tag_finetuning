@@ -13,7 +13,7 @@ with open("results/To_be_classified.txt","w") as f:
             f.write(raw_text_line)
         if raw_text_line=='':
             break
-        else:
+        if len(raw_text_line.strip())!=0:
             raw_text_line = raw_text_line.strip()
             f.write("{} {}".format(raw_text_line, tag))
     g.close()
