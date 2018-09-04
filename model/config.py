@@ -71,7 +71,7 @@ class Config():
     use_pretrained = True
 
     # dataset
-    filename_dev = "data/valid1.txt"
+    filename_dev = "data/test1.txt"
     filename_test = "data/test1.txt"
     filename_train = "data/train1.txt"
 
@@ -88,12 +88,12 @@ class Config():
     train_embeddings = False
     nepochs          = 200
     dropout          = 0.5
-    batch_size       = 40
+    batch_size       = 20
     lr_method        = "adam"
     lr               = 0.001
-    lr_decay         = 0.9
+    lr_decay         = 0.96
     clip             = -1 # if negative, no clipping
-    nepoch_no_imprv  = 5
+    nepoch_no_imprv  = 10
 
     # model hyperparameters
     hidden_size_char = 100 # lstm on chars
