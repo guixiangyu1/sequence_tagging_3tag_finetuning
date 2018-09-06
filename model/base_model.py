@@ -166,7 +166,7 @@ class BaseModel(object):
                 nepoch_no_imprv = 0
                 self.save_session()
                 best_score = score
-                self.logger.info("- new best score!")
+                self.logger.info("- new best score!- r")
             else:
                 nepoch_no_imprv += 1
                 if nepoch_no_imprv >= self.config.nepoch_no_imprv:
