@@ -210,6 +210,7 @@ class NERModel(BaseModel):
             losses = tf.boolean_mask(losses, mask)
             self.loss = tf.reduce_mean(losses)
 
+
         # for tensorboard
         tf.summary.scalar("loss", self.loss)
 
@@ -240,6 +241,8 @@ class NERModel(BaseModel):
 
         """
         fd, sequence_lengths = self.get_feed_dict(words, dropout=1.0)
+
+
 
         if self.config.use_crf:
             # get tag scores and transition params of CRF
@@ -326,6 +329,7 @@ class NERModel(BaseModel):
 
                 for words, labels in minibatches(test, self.config.batch_size):
                     labels_pred, sequence_lengths = self.predict_batch(words)
+
 
 
                     for lab, lab_pred, length in zip(labels, labels_pred,
