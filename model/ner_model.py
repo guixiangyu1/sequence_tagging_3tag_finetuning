@@ -298,7 +298,7 @@ class NERModel(BaseModel):
                 for k, v in metrics.items()])
         self.logger.info(msg)
 
-        return metrics["f1"]
+        return metrics["r"]
 
 
     def run_evaluate(self, test):
