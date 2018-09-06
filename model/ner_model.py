@@ -331,7 +331,6 @@ class NERModel(BaseModel):
                     labels_pred, sequence_lengths = self.predict_batch(words)
 
 
-
                     for lab, lab_pred, length in zip(labels, labels_pred,
                                                      sequence_lengths):
                         lab      = lab[:length]
